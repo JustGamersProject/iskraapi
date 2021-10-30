@@ -3,3 +3,5 @@ Dockerfile
 default.conf
 docker-compose.yml
 php.ini-production
+.env
+vendor/
