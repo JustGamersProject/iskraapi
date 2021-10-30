@@ -11,6 +11,13 @@ header('Content-Type: application/json; charset=utf8');
 $json   = array();
 $errors = array();
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use \Symfony\Component\Dotenv\Dotenv;
+
+$dotenv = new Dotenv();
+$dotenv->usePutenv()->load(dirname(__DIR__).'/.env');
+
 //Подключаем конфиг
 include(__DIR__ . "/config/config.php");
 
